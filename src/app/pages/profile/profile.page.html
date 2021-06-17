@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/vendor-home-tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Profile {{name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="profile-circle"></div>
+  <!-- <div class="profile-info">
+    <ion-item>
+      <ion-label>FirstName:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>SurName:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>UserName:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Gender:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date Of Birth:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email Address:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Physical Address:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Password:</ion-label>
+    </ion-item>
+  </div> -->
+
+  <ion-card>
+    <ion-card-header class="headerCard">
+      <ion-card-subtitle> My Profile </ion-card-subtitle>
+      <ion-card-title>General</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="profile-info" *ngFor="let profile of profiles">
+        <div class="labe/Profile">
+          <ion-label>Full Names: </ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >{{profile.Firstname}}{{profile.Surname}}
+          </ion-label>
+        </div>
+        <div class="labe/Profile">
+          <ion-label>Identity Number: </ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >{{profile.Identity_Number}}
+          </ion-label>
+        </div>
+        <div class="labe/Profile">
+          <ion-label>Gender: </ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >{{profile.Gender}}
+          </ion-label>
+        </div>
+        <div class="labe/Profile">
+          <ion-label>date Of Birth: </ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >{{profile.Date_Of_Birth}}
+          </ion-label>
+        </div>
+        <div class="labe/Profile">
+          <ion-label>Status:</ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >Vendor
+          </ion-label>
+        </div>
+
+        <div class="labe/Profile">
+          <ion-label>Date Created:</ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >{{profile.create_at}}
+          </ion-label>
+        </div>
+        <div class="labe/Profile">
+          <ion-label>Physical Address:</ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >{{profile.PhysicalAddress}}
+          </ion-label>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle> My Profile </ion-card-subtitle>
+      <ion-card-title>Security</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="profile-info" *ngFor="let profile of profiles">
+        <div class="labe/Profile">
+          <ion-label>Email Address:</ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >{{profile.Email}}
+          </ion-label>
+        </div>
+        <div class="labe/Profile">
+          <ion-label>Username:</ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >{{profile.Username}}
+          </ion-label>
+        </div>
+        <div class="labe/Profile">
+          <ion-label>Phone Number:</ion-label>
+          <ion-label style="margin-left: 10px; color: primary"
+            >+267{{profile.Phone_Number}}
+          </ion-label>
+        </div>
+        <ion-button
+          expand="full"
+          (click)="editProfile(profile.Identity_Number, profile.Firstname, profile.Surname, profile.Email, profile.Username,profile.PhysicalAddress,profile.Phone_Number)"
+          >Edit Profile</ion-button
+        >
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

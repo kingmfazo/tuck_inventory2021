@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Products Entry</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div class="form">
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Product Name"
+          [(ngModel)]="product_name"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Vendors Name"
+          [(ngModel)]="vendor_name"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Identinty Number"
+          [(ngModel)]="id_no"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Product Quantity"
+          [(ngModel)]="quantity"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Purchase Price"
+          [(ngModel)]="purchase_price"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="full"
+        color="dark"
+        (click)="addProduct()"
+        [disabled]="disabledButton"
+      >
+        Stock Now
+      </ion-button>
+      <ion-button
+        class="addedBtns"
+        fill="clear"
+        color="primary"
+        expand="full"
+        (click)="clear()"
+        [disabled]="disabledButton"
+        >Clear</ion-button
+      >
+    </div>
+  </ion-list>
+</ion-content>

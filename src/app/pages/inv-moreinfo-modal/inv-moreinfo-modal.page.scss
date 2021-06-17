@@ -1,0 +1,32 @@
+.modal_content {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: auto;
+  padding: 4px;
+
+  width: 100%;
+}
+
+.modal_label {
+  margin-left: 2px;
+  width: 45%;
+  display: flex;
+  font-size: 14px;
+}
+
+.barcode_label {
+  font-size: 13px;
+  color: orange;
+}
+.icon_rep {
+  font-size: 18px;
+  text-align: center;
+  justify-content: space-around;
+  align-items: space-between;
+}
+
+.price {
+  border-radius: 2px;
+  border: 2px solid aqua;
+  padding: 2px;
+}

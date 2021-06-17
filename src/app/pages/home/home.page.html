@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <i-buttons class="logBtn" slot="end" color="light">
+      <ion-icon name="log-out" (click)="logOut()"></ion-icon>
+    </i-buttons>
+    <ion-title class="title">SME-K Home </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="camera">
+      <ion-icon name="camera"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="bookmark">
+      <ion-icon name="bookmark"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+<ion-content>
+  <ion-content>
+    <div class="ion-padding">
+      <ion-card>
+        <ion-card-header> Bar Chart </ion-card-header>
+        <ion-card-content>
+          <canvas #barCanvas width="400" height="400"></canvas>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <!-- <ion-card>
+      <ion-card-header>
+        Doughnut Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #doughnutCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        Line Chart
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card> -->
+    <!-- </div> -->
+    <!-- </ion-content> -->
+
+    <!-- <ion-tabs style="margin-top: 15%">
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="sales">
+        <ion-icon name="calculator"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="profit-loss">
+        <ion-icon name="cash"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="stock">
+        <ion-icon name="basket"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs> -->
+  </ion-content>
+
+  <!-- <ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="product-add">
+      <ion-icon name="add"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="products-entry">
+      <ion-icon name="cash"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="inventory-management">
+      <ion-icon name="basket"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="request-stock">
+      <ion-icon name="basket"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs> -->
+</ion-content>

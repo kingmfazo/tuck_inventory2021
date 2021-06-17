@@ -1,0 +1,117 @@
+// .info-1 {
+//   font-size: 14px;
+//   color: #999;
+// }
+
+// .info-1 span {
+//   color: blue;
+// }
+
+// .logo {
+//   margin-top: 2%;
+//   img {
+//     height: 2%;
+//   }
+// }
+
+// ion-content.background {
+//   // --background:url(https://www.wallpapertip.com/wmimgs/196-1963020_website-backgrounds-website-login-page-background.jpg);
+// }
+
+// .form {
+//   margin-top: 2%;
+//   ion-item {
+//     border-radius: 5px;
+//     border-color: gray;
+//     border-width: 2px;
+//     border-style: solid;
+//     margin-bottom: 10px;
+//     margin-left: 5%;
+//     margin-right: 5%;
+//   }
+// }
+// ion-button {
+//   text-transform: none;
+//   margin-left: 5%;
+//   margin-right: 5%;
+//   border-radius: 5px;
+// }
+.addedBtns {
+  font-size: 10px;
+}
+.input_holder {
+  margin-bottom: 10px;
+  color: #2d2c2d;
+}
+.input_holder2 {
+  margin-bottom: 10px;
+  color: #2d2c2d;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+}
+.input_holder ion-input {
+  font-size: 14px;
+}
+.input_holder2 ion-select {
+  font-size: 14px;
+}
+.inputs {
+  background-color: lightgray;
+  border-radius: 5px;
+  height: fit-content;
+  color: #2d2c2d;
+  height: 30px;
+}
+
+.selects {
+  background-color: lightgray;
+  border-radius: 5px;
+  height: fit-content;
+  color: #2d2c2d;
+  height: 30px;
+  color: #2d2c2d;
+  margin-left: 30px;
+  padding-left: 6px;
+}
+.date_time {
+  background-color: lightgray;
+  border-radius: 5px;
+  height: fit-content;
+  color: #2d2c2d;
+  height: 30px;
+  color: #2d2c2d;
+  margin-left: 30px;
+  padding-left: 6px;
+}
+
+.icon_div {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-left: 3px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon_div2 {
+  background-color: lightgray;
+  border-radius: 2px;
+  margin-left: 3px;
+  margin-bottom: -30px;
+  width: 25px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  color: var(--ion-color-danger);
+}
+
+.title {
+  margin-top: 10px;
+}

@@ -1,0 +1,329 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title class="title">Update Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Identity Number</ion-label>
+
+        <ion-input
+          type="number"
+          placeholder="Enter  identity number"
+          [(ngModel)]="identity_number"
+          readonly
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="grid-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">First Name</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Enter first name"
+          [(ngModel)]="firstname"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="person-circle-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Surname</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Enter surname"
+          [(ngModel)]="surname"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="person-circle-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Username</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Enter username"
+          [(ngModel)]="username"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="people-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Email Address</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Enter email address"
+          [(ngModel)]="email_address"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="mail-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Physical Address</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Enter physical address"
+          [(ngModel)]="physical_address"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="location-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Phone</ion-label>
+
+        <ion-input
+          type="tel"
+          placeholder="Enter phone number"
+          [(ngModel)]="phone_number"
+          min="8"
+          maxlength="10"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="call-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <ion-button
+        expand="full"
+        color="dark"
+        (click)="updateProfile()"
+        [disabled]="disabledButton"
+      >
+        Update
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-list>
+    <div class="form">
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Identity Number"
+          [(ngModel)]="identity_number"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="FirstName"
+          [(ngModel)]="firstname"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Surname"
+          [(ngModel)]="surname"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Label</ion-label>
+        <ion-icon
+          name="lock-closed-outline"
+          slot="start"
+          color="secondary"
+        ></ion-icon>
+
+        <ion-input
+          type="text"
+          placeholder="Username"
+          [(ngModel)]="username"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item style="color: #999">
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-label>Gender</ion-label>
+        <ion-select interface="popover" [(ngModel)]="gender">
+          <ion-select-option value="M">Male</ion-select-option>
+          <ion-select-option value="F">Female</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item style="color: #999">
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-label>Date of Birth</ion-label>
+        <ion-datetime
+          displayFormat="YYYY/MM/DD"
+          min="1944-03-14"
+          max="2021-12-09"
+          [(ngModel)]="date_of_birth"
+        ></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+
+        <ion-input
+          type="text"
+          placeholder="Email Address"
+          [(ngModel)]="email_address"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Physical Address"
+          [(ngModel)]="physical_address"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Phone Number"
+          [(ngModel)]="phone_number"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Password"
+          [(ngModel)]="password"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Confirm Password"
+          [(ngModel)]="confirm_pass"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="full"
+        color="dark"
+        (click)="tryRegister()"
+        [disabled]="disabledButton"
+      >
+        Register
+      </ion-button>
+      <ion-button
+        class="addedBtns"
+        fill="clear"
+        color="primary"
+        expand="full"
+        (click)="openLogin()"
+        [disabled]="disabledButton"
+        >Already Have An Account</ion-button
+      >
+    </div>
+  </ion-list> -->
+</ion-content>

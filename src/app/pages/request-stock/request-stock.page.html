@@ -1,0 +1,233 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title class="title">Request Stock</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <h4 class="heading4">Provide All Details To Order Your Products</h4>
+      <hr color="primary" />
+
+      <div class="input_holder" style="width: 85%">
+        <ion-label position="floating" lines="none"
+          >Product ID/ Barcode</ion-label
+        >
+
+        <ion-input
+          type="number"
+          placeholder="0123456789"
+          [(ngModel)]="barcode"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="barcode"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <ion-icon
+        name="scan"
+        class="icon"
+        color="secondary"
+        id="scanIcon"
+        (click)="scan()"
+        style="float: right; font-size: 25px; margin-top: -40px"
+      ></ion-icon>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Product Name</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Product Name //Autofill"
+          [(ngModel)]="product_name"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="pricetag"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none"
+          >Preferrable Color</ion-label
+        >
+
+        <ion-input
+          type="text"
+          placeholder="Enter Color"
+          [(ngModel)]="product_color"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="color-palette"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Preferrable</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Product Size"
+          [(ngModel)]="product_size"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="document-text"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Quantity</ion-label>
+
+        <ion-input
+          type="number"
+          placeholder="Enter Stock Quantity"
+          [(ngModel)]="quantity"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="locate-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Cash In Hand</ion-label>
+
+        <ion-input
+          type="number"
+          placeholder="Enter Your Cash/Payment Value"
+          [(ngModel)]="cash"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="cash"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <div class="input_holder2">
+        <ion-label position="floating" lines="none">Supplier</ion-label>
+        <div class="icon_div2">
+          <ion-icon
+            name="bus-outline"
+            slot="start"
+            color="secondary"
+            class="icon"
+          ></ion-icon>
+        </div>
+        <ion-select
+          interface="popover"
+          [(ngModel)]="supplier"
+          class="selects"
+          placeholder="Select Supplier"
+        >
+          <ion-select-option *ngFor="let supplier of suppliers" [value]=""
+            >{{supplier.Firstname}}</ion-select-option
+          >
+        </ion-select>
+      </div>
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Identity Number</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Enter Your Identity (Vendor) Number  Size"
+          [(ngModel)]="vendor_id"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="apps-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Physical Address</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Provide Your Physical Address"
+          [(ngModel)]="physical_address"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="location-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Phone</ion-label>
+
+        <ion-input
+          type="number"
+          placeholder="Enter phone number"
+          [(ngModel)]="phone_number"
+          maxlength="10"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="call-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <ion-button
+        expand="full"
+        color="dark"
+        (click)="tryRegister()"
+        [disabled]="disabledButton"
+      >
+        Place Order
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

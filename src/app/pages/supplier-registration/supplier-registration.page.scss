@@ -1,0 +1,43 @@
+.info-1 {
+  font-size: 14px;
+  color: #999;
+}
+
+.info-1 span {
+  color: blue;
+}
+
+.logo {
+  margin-top: 2%;
+  img {
+    height: 2%;
+  }
+}
+
+ion-content.background {
+  // --background:url(https://www.wallpapertip.com/wmimgs/196-1963020_website-backgrounds-website-login-page-background.jpg);
+}
+
+.form {
+  margin-top: 2%;
+  ion-item {
+    border-radius: 5px;
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+ion-button {
+  text-transform: none;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 5px;
+}
+.addedBtns {
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 5px;
+}

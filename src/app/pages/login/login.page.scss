@@ -1,0 +1,64 @@
+.title {
+  margin-top: 10px;
+}
+.info-1 {
+  font-size: 14px;
+  color: #999;
+}
+
+.info-1 span {
+  color: blue;
+}
+
+.logo {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  img {
+    height: 100px;
+    width: 90%;
+  }
+}
+
+ion-content.background {
+  // --background:url(https://www.wallpapertip.com/wmimgs/196-1963020_website-backgrounds-website-login-page-background.jpg);
+}
+
+.f_N_c {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.addedBtns {
+  text-transform: none;
+  width: 45%;
+  border-radius: 3px;
+  float: left;
+  font-size: 10px;
+}
+
+.input_holder {
+  margin-bottom: 10px;
+  color: #2d2c2d;
+}
+
+.inputs {
+  background-color: lightgray;
+  border-radius: 5px;
+  height: fit-content;
+  color: #2d2c2d;
+  height: 30px;
+}
+
+.icon_div {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-left: 3px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

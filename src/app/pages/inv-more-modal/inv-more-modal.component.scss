@@ -1,0 +1,32 @@
+.modal_content {
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: lightgray;
+  padding: 4px;
+  width: 100%;
+}
+
+.labels {
+  color: blue;
+  font-size: 13px;
+}
+
+.db_data {
+  color: green;
+  font-size: 12px;
+}
+
+.stockAlert_badge {
+  text-align: center;
+  margin-left: 49%;
+  margin-right: 49%;
+  margin-bottom: -10px;
+  justify-content: center;
+  align-content: center;
+  width: 30px;
+  height: 20px;
+}
+
+.title {
+  margin-top: 10px;
+}

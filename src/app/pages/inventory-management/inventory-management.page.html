@@ -1,0 +1,149 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title">Inventory Management</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list lines="full">
+    <ion-item-sliding *ngFor="let product of products">
+      <ion-item button (click)="openModal(product)">
+        <ion-thumbnail class="ion-margin-end" style="width: 40px; height: 40px">
+          <img src="./assets/phone.jpg" />
+        </ion-thumbnail>
+
+        <ion-label class="barcode_label">
+          <ion-icon name="barcode" class="icon_rep" color="success"></ion-icon>
+          {{product.Barcode}}</ion-label
+        >
+        <ion-label
+          class="ion-text-wrap"
+          style="margin-right: 25px; font-size: 10px"
+          >{{ product.Product_Name }}</ion-label
+        >
+
+        <ion-label class="price" style="font-size: 10px"
+          >{{ product.Purchase_Prize | currency:'BWP'}}</ion-label
+        >
+
+        <!-- <ion-label>{{ product.Quantity }}</ion-label> -->
+      </ion-item>
+
+      <ion-item-options side="start" style="background: orangered; color: red">
+        <ion-button
+          class="delete"
+          (click)="delData(product.Barcode)"
+          style="margin: auto; margin-right: 90%; background: orangered"
+          ><ion-icon name="trash-outline"></ion-icon
+        ></ion-button>
+      </ion-item-options>
+
+      <ion-item-options side="end" style="background: lightblue; color: white">
+        <ion-button
+          class="edit"
+          (click)="updateData(product.Barcode)"
+          style="margin: auto"
+          ><ion-icon name="create-outline"></ion-icon
+        ></ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)=" openAdd()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- <div
+    style="
+      font-size: 14px;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      align-items: space-between;
+      color: blue;
+      text-transform: upper-case;
+      margin-top: 15px;
+      background: lightblue;
+    "
+  >
+    <ion-label>Product Name</ion-label>
+    <ion-label>Product Price</ion-label>
+    <ion-label>Product Quantity</ion-label>
+  </div> -->
+
+  <!-- <ion-list>
+    <ion-item-sliding *ngFor="let product of products">
+      <ion-item
+        style="
+          font-size: 12px;
+          text-align: center;
+          display: flex;
+          justify-content: space-around;
+          align-items: space-between;
+          text-transform: upper-case;
+        "
+      >
+        <ion-label
+          >{{ product.Product_Name }}
+          <p style="font-size: 11px; color: orange">
+            <ion-icon
+              name="barcode"
+              style="
+                font-size: 18px;
+                text-align: center;
+                justify-content: space-around;
+                align-items: space-between;
+              "
+              color="success"
+            ></ion-icon
+            >{{product.Barcode}}
+          </p></ion-label
+        >
+
+        <ion-label>{{ product.Purchase_Prize }}</ion-label>
+        <ion-label>{{ product.Quantity }}</ion-label>
+      </ion-item>
+
+      <ion-item-options
+        class="optionBtns"
+        side="start"
+        style="background: orangered; color: red"
+      >
+        <ion-button
+          class="delete"
+          (click)="delData(product.Barcode)"
+          style="margin: auto; margin-right: 90%"
+          ><ion-icon name="trash-outline"></ion-icon
+        ></ion-button>
+      </ion-item-options>
+
+      <ion-item-options
+        class="optionBtns"
+        side="end"
+        style="background: lightblue; color: white"
+      >
+        <ion-button
+          class="edit"
+          (click)="updateData(product.Barcode)"
+          style="margin: auto; margin-left: 90%"
+          ><ion-icon name="create-outline"></ion-icon
+        ></ion-button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list> -->
+</ion-content>

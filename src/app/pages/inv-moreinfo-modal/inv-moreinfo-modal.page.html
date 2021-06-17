@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ Barcode }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()"> Close </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div class="modal_content">
+    <div class="modal_label">
+      <ion-label class="modal_text">Barcode:</ion-label>
+    </div>
+
+    <div class="modal_label">
+      <ion-label class="modal_text">Purchase Price:</ion-label>
+    </div>
+
+    <div class="modal_label">
+      <ion-label class="modal_text">Product Color:</ion-label>
+    </div>
+
+    <div class="modal_label">
+      <ion-label class="modal_text">Product Size:</ion-label>
+    </div>
+
+    <div class="modal_label">
+      <ion-label class="modal_text">Quantity:</ion-label>
+    </div>
+    <div class="modal_desc">
+      <ion-label class="modal_text">Description:</ion-label>
+    </div>
+  </div>
+</ion-content>

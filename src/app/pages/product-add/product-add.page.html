@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Scan/Add Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div class="form">
+      <ion-item>
+        <ion-icon name="barcode" class="icon" color="secondary"></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Product ID/Barcode"
+          [(ngModel)]="barcode"
+        ></ion-input>
+        <ion-icon
+          name="scan"
+          class="icon"
+          color="secondary"
+          (click)="scan()"
+        ></ion-icon>
+        <!--  <ion-button
+        class="scanBtn"
+        fill="clear"
+        color="primary"
+        expand="full"
+        (click)="clear()"
+        [disabled]="disabledButton"
+        >Scan</ion-button -->
+      </ion-item>
+      <ion-item>
+        <ion-icon name="pricetag" class="icon" color="secondary"></ion-icon>
+
+        <ion-input
+          type="text"
+          placeholder="Product Name"
+          [(ngModel)]="product_name"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon
+          name="color-palette"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Product Color"
+          [(ngModel)]="product_color"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="expand" class="icon" color="secondary"> </ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Product Size"
+          [(ngModel)]="product_size"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="document-text"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Description"
+          [(ngModel)]="description"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="lock-closed-outline"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Product Quantity"
+          [(ngModel)]="quantity"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="logo-usd" class="icon" color="secondary"></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Product Price"
+          [(ngModel)]="purchase_prize"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon
+          name="notifications"
+          class="icon"
+          color="secondary"
+        ></ion-icon>
+        <ion-input
+          type="text"
+          placeholder="Low Stock Alert"
+          [(ngModel)]="stock_alert"
+        ></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="full"
+        color="dark"
+        (click)="addProduct()"
+        [disabled]="disabledButton"
+      >
+        Stock Now
+      </ion-button>
+    </div>
+  </ion-list>
+</ion-content>

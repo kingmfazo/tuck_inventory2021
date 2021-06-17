@@ -1,0 +1,23 @@
+.form {
+  margin-top: 2%;
+  ion-item {
+    border-radius: 5px;
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+ion-button {
+  text-transform: none;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 5px;
+}
+
+.title {
+  margin-top: 10px;
+}

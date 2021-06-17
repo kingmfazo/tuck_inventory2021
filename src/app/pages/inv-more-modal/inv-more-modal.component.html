@@ -1,0 +1,148 @@
+<ion-header class="head">
+  <ion-toolbar lines="none">
+    <ion-title class="title"> {{ Product_Name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()" color="danger"> Close </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-badge color="warning" class="stockAlert_badge">{{
+    Stock_Alert
+  }}</ion-badge>
+  <div class="modal_content">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="labels">Barcode:</div>
+        </ion-col>
+
+        <ion-col>
+          <div class="db_data">{{ Barcode }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="labels">Purchase Price:</div>
+        </ion-col>
+        <ion-col>
+          <div class="db_data">{{ Price | currency: "BWP" }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="labels">Product Name:</div>
+        </ion-col>
+        <ion-col>
+          <div class="db_data">{{ Product_Name }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="labels">Quantity:</div>
+        </ion-col>
+
+        <ion-col>
+          <div class="db_data">{{ Quantity }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="labels">Product Color:</div>
+        </ion-col>
+
+        <ion-col>
+          <div class="db_data">{{ Product_Color }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="labels">Product Size:</div>
+        </ion-col>
+
+        <ion-col>
+          <div class="db_data">{{ Product_Size }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="labels">Stock Alert:</div>
+        </ion-col>
+
+        <ion-col>
+          <div class="db_data">{{ Stock_Alert }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="labels">Description:</div>
+        </ion-col>
+
+        <ion-col>
+          <div class="db_data">{{ Description }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- <div class="modal_content">
+    <div class="modal_label">
+      <ion-label class="modal_text"
+        >Barcode:
+        <p class="db_data">{{ Barcode }}</p></ion-label
+      >
+    </div>
+
+    <div class="modal_label">
+      <ion-label class="modal_text"
+        >Purchase Price:
+        <p class="db_data">{{ Price }}</p></ion-label
+      >
+    </div>
+
+    <div class="modal_label">
+      <ion-label class="modal_text"
+        >Product Color:
+        <p class="db_data">{{ Barcode }}</p></ion-label
+      >
+    </div>
+
+    <div class="modal_label">
+      <ion-label class="modal_text"
+        >Product Size:
+        <p class="db_data">{{ Barcode }}</p></ion-label
+      >
+    </div>
+
+    <div class="modal_label">
+      <ion-label class="modal_text"
+        >Quantity:
+        <p class="db_data">{{ Quantity }}</p></ion-label
+      >
+    </div>
+    <div class="modal_desc">
+      <ion-label class="modal_text">Description:</ion-label>
+    </div>
+  </div> -->
+</ion-content>

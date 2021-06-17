@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Approve Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <h4 class="heading4">Provide Valid Data</h4>
+      <hr color="primary" />
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Order ID</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="{{Order_Id}}"
+          [(ngModel)]="Order_Id"
+          value="{{Order_Id}}"
+          class="inputs"
+          readonly
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="apps-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Barcode</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder=""
+          [(ngModel)]="Product_Id"
+          value="{{Product_Id}}"
+          class="inputs"
+          readonly
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="barcode"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Quantity</ion-label>
+
+        <ion-input
+          type="number"
+          placeholder="Enter Stock Quantity"
+          [(ngModel)]="Quantity"
+          value="{{Quantity}}"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="locate-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+              aria-readonly="quantity"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Price To Pay</ion-label>
+
+        <ion-input
+          type="number"
+          placeholder="Enter Your Cash/Payment Value"
+          [(ngModel)]="Total_Price"
+          value="{{Total_Price}}"
+          class="inputs"
+          required
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="cash"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <div class="input_holder2">
+        <ion-label position="floating" lines="none">Delivery Date</ion-label>
+        <div class="icon_div2">
+          <ion-icon
+            name="calendar"
+            slot="start"
+            color="secondary"
+            class="icon"
+          ></ion-icon>
+        </div>
+        <ion-datetime
+          displayFormat="YYYY/MM/DD"
+          min="1944-03-14"
+          max="2021-12-09"
+          [(ngModel)]="Delivery_Date"
+          class="date_time"
+          placeholder="2021-12-09"
+        >
+        </ion-datetime>
+      </div>
+      <ion-button
+        expand="full"
+        color="dark"
+        (click)="tryRegister()"
+        [disabled]="disabledButton"
+      >
+        Approve Order
+      </ion-button>
+      <ion-button
+        class="addedBtns"
+        fill="clear"
+        style="border: 1px solid red"
+        color="primary"
+        expand="full"
+        (click)="dismissModal()"
+        [disabled]="disabledButton"
+        >CLOSE</ion-button
+      >
+    </ion-card-content>
+  </ion-card>
+</ion-content>

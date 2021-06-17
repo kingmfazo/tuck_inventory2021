@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title class="title">Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-card>
+    <ion-card-content>
+      <div class="logo">
+        <img src="./assets/SMEKLogo1.png" alt="logo" srcset="" />
+      </div>
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Username</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Enter username"
+          [(ngModel)]="email_address"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="people-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Password</ion-label>
+
+        <ion-input
+          type="password"
+          placeholder="Enter password"
+          [(ngModel)]="password"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="lock-closed-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <ion-button
+        expand="full"
+        color="dark"
+        (click)="tryLogin()"
+        [disabled]="disabledButton"
+      >
+        Login
+      </ion-button>
+      <div class="f_N_c">
+        <ion-button
+          fill="clear"
+          (click)="forgotPass()"
+          color="danger"
+          expand="full"
+          class="addedBtns"
+          >Forgot Password</ion-button
+        >
+        <ion-button
+          class="addedBtns"
+          fill="clear"
+          color="primary"
+          expand="full"
+          (click)="openRegister()"
+          [disabled]="disabledButton"
+          >New? SignUp Here</ion-button
+        >
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

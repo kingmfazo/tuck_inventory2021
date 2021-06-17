@@ -1,0 +1,159 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title class="title">Enter Sales</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar style="text-align: center; color: red">
+  <br />
+  <ion-searchbar
+    showCancelButton="focus"
+    inputmode="numeric"
+    animated
+    placeholder="0123456789"
+    [(ngModel)]="barcode"
+    (ionChange)="searchProds($event)"
+  >
+  </ion-searchbar>
+  <ion-label
+    position="floating"
+    lines="none"
+    style="text-align: center; color: red"
+    >Search Using Barcode</ion-label
+  >
+</ion-toolbar>
+
+<ion-content ion-padding>
+  <ion-list>
+    <ion-item
+      position="floating"
+      lines="none"
+      style="text-align: center; color: lightskyblue"
+    >
+      {{product_name}}
+    </ion-item>
+  </ion-list>
+  <ion-card>
+    <ion-card-content>
+      <h4 class="heading4">Provide Daily Sales</h4>
+      <hr color="primary" />
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Product Name</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="{{product_name}}"
+          [(ngModel)]="product_name"
+          value="{{product_name}}"
+          class="inputs"
+          readonly
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="pricetag"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Barcode</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder=""
+          [(ngModel)]="A_barcode"
+          value="{{A_barcode}}"
+          class="inputs"
+          readonly
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="barcode"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Product Size</ion-label>
+
+        <ion-input
+          type="text"
+          placeholder="Product Size"
+          [(ngModel)]="product_size"
+          value="{{product_size}}"
+          class="inputs"
+          readonly
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="document-text"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none">Quantity</ion-label>
+
+        <ion-input
+          type="number"
+          placeholder="Enter Stock Quantity"
+          [(ngModel)]="quantity"
+          value="{{quantity}}"
+          class="inputs"
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="locate-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+              aria-readonly="quantity"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+      <div class="input_holder">
+        <ion-label position="floating" lines="none"
+          >Price Per Product</ion-label
+        >
+
+        <ion-input
+          type="number"
+          placeholder="Enter Your Cash/Payment Value"
+          [(ngModel)]="cash"
+          value="{{cash}}"
+          class="inputs"
+          required
+        >
+          <div class="icon_div">
+            <ion-icon
+              name="lock-closed-outline"
+              slot="end"
+              color="secondary"
+              class="icon"
+            ></ion-icon>
+          </div>
+        </ion-input>
+      </div>
+
+      <ion-button
+        expand="full"
+        color="dark"
+        (click)="tryRegister()"
+        [disabled]="disabledButton"
+      >
+        Save
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
